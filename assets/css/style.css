@@ -1,0 +1,167 @@
+:root {
+    font-size: 50%;
+
+    --cs--primary: linear-gradient(113deg, hsl(133, 68%, 49%) 43%, hsl(133, 56%, 33%) 93%);
+    --cs--bg: hsl(133deg 15% 5%);
+    --cs--title: hsl(133deg 7% 94%);
+    --cs--label: hsl(133, 68%, 49%);
+
+    --fw--lg: 300;
+    --fw--rg: 400;
+    --fw--md: 500;
+    --fw--xl: 700;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    background: linear-gradient();
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--cs--bg);
+}
+
+.container {
+    --padding: .8rem;
+    width: 100%;
+    max-width: 45rem;
+    background-color: hsl(133deg 2% 10%);
+    display: grid;
+    gap: var(--padding);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px 2px hsl(133, 56%, 33%);
+}
+
+.form__header {
+    background: var(--cs--primary);
+    padding-block: var(--padding);
+}
+
+.form__title {
+    font-size: 2.8rem;
+    font-weight: var(--fw--xl);
+    color: var(--cs--title);
+    text-align: center;
+}
+
+.form {
+    padding: 1rem;
+    display: grid;
+    width: 100%;
+}
+
+.form__control {
+    margin-block-end: 1rem;
+    position: relative;
+}
+
+.form__control label {
+    color: var(--cs--title);
+    font-size: 1.7rem;
+    font-weight: var(--fw--rg);
+}
+
+.form__control input {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    border-radius: .8rem;
+    border: 3px solid transparent;
+    background-color: #696868;
+    outline: 0;
+    font-size: 1.6rem;
+    font-weight: var(--fw--md);
+    color: var(--cs--title);
+    margin-block: .5rem;
+}
+
+.form__control input::placeholder {
+    color: #c5c4c4;
+    font-weight: var(--fw--md);
+    font-size: 1.6rem;
+}
+
+.form__control input:is(:hover, :focus) {
+    border-color: var(--cs--label);
+    outline-color: var(--cs--label);
+}
+
+.btn {
+    background: var(--cs--label);
+    color: var(--cs--title);
+    font-size: 2rem;
+    font-weight: var(--fw--md);
+    line-height: 2.3;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:is(:hover, :focus) {
+    opacity: .9;
+}
+
+.form__control.sucesso input {
+    border-color: #09c372;
+}
+
+.form__control.error input {
+    border-color: #ff3860;
+}
+
+.form__control .error {
+    color: #ff3860;
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: var(--fw--lg);
+}
